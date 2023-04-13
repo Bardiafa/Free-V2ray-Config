@@ -34,9 +34,9 @@ jobs:
     - name: Commit and push files
       uses: EndBug/add-and-commit@v7
       with:
-        author_name: "Github Actions" 
-        author_email: "actions@github.com"
-        message: "Updated few minutes Ago🤝"
+        author_name: "hossein mohseni" 
+        author_email: "m.hossein769@gmail.com"
+        message: "Updated few minutes Ago 🤝"
         add: "."
         push: "https://github.com/hossein-mohseni/Free-V2ray-Config.git"
     env:
