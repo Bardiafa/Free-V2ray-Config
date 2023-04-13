@@ -36,7 +36,7 @@ jobs:
       with:
         author_name: "Github Actions" 
         author_email: "actions@github.com"
-        message: "Updated few minutes Ago 🤝"
+        message: "Updated few minutes Ago🤝"
         add: "."
         push: "https://github.com/hossein-mohseni/Free-V2ray-Config.git"
     env:
