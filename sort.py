@@ -33,6 +33,10 @@ for config in respnse.splitlines():
         ssr += config + "\n"
  
 open(vless_file, "w").write(base64.b64encode(vless.encode("utf-8")).decode("utf-8"))  
+print("vless sorted")
 open(trojan_file, "w").write(base64.b64encode(trojan.encode("utf-8")).decode("utf-8"))  
+print("trojan sorted")
 open(ss_file, "w").write(base64.b64encode(ss.encode("utf-8")).decode("utf-8"))  
+print("ss sorted")
 open(ssr_file, "w").write(base64.b64encode(ssr.encode("utf-8")).decode("utf-8"))  
+print("ssr sorted")
