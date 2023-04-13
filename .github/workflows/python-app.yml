@@ -27,7 +27,10 @@ jobs:
 
     - name: Run Python script and save output to file
       run: python app.py > configs.txt
-
+      
+    - name: Run Python script and save output to file
+      run: python sort.py
+      
     - name: Commit and push files
       uses: EndBug/add-and-commit@v7
       with:
