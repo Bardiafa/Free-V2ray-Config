@@ -19,7 +19,7 @@ vless = ""
 trojan = ""
 ss = ""
 ssr = ""
-respnse = requests.get("https://raw.githubusercontent.com/Bardiafa/Free-V2ray-Config/main/configs.txt").text
+respnse = requests.get("https://github.com/hossein-mohseni/Free-V2ray-Config/blob/main/configs.txt").text
 for config in respnse.splitlines():
     if config.startswith("vmess"):
         open(vmess_file, "a").write(config + "\n")     
