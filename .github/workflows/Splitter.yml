@@ -1,40 +1,14 @@
-name: Splitter
-permissions: write-all
-
-on:
-  push:
-    branches:
-      - main
-  schedule:
-    # Run every 9 minutes
-    - cron: "*/9 * * * *"
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.11'
-      
-    - name: Install dependencies
-      run: cd Files && pip install -r requirements.txt
-      
-    - name: Run Python script and save output to file
-      run: cd Files && python sort.py
-
-    - name: Commit and push files
-      uses: EndBug/add-and-commit@v7
-      with:
-        author_name: "Github Actions" 
-        author_email: "actions@github.com"
-        message: "Sorted 9 minutes Ago. 🎇"
-        add: "."
-        push: "https://github.com/Bardiafa/Free-V2ray-Config.git"
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+addEventListener(
+  "fetch", event => {
+      let url = new URL(event.request.url);
+      let realhostname = url.pathname.split('/')[2];
+      let realpathname = url.pathname.split('/')[1];
+      url.hostname = realhostname;
+      url.pathname = '/'+ realpathname;
+      url.protocol = "https";
+      let request = new Request(url, event.request);
+      event.respondWith(
+         fetch(request)
+      )
+  }
+)
